@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.ShopMapper">
+ 	<insert id="insert">
+ 		insert into tbl_shop(pid,pname,pmall,price,image,query) values(#{pid},#{pname},#{pmall},#{price},#{image},#{query})
+ 	</insert>
+ 	<select id="read" resultType="com.example.domain.ShopVO">
+ 		select * from tbl_shop where pid=#{pid}
+ 	</select>
+</mapper>
